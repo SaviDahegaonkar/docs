@@ -2,23 +2,25 @@
   "name": "codecademy-docs",
   "dependencies": {
     "front-matter": "^4.0.2",
-    "glob": "^7.1.7"
+    "glob": "^7.1.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@codecademy/eslint-config": "^6.0.0",
+    "@codecademy/eslint-config": "^3.1.0",
     "@codecademy/prettier-config": "^0.2.0",
     "@codecademy/tsconfig": "^0.3.0",
     "@types/glob": "^8.1.0",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.1.0",
-    "eslint": "^7.32.0",
+    "eslint": "^6.5.1",
     "husky": "^8.0.3",
     "jest": "^29.5.0",
-    "lint-staged": "^13.2.2",
+    "lint-staged": "^15.2.10",
     "markdownlint-cli": "^0.34.0",
     "prettier": "^2.8.8",
-    "ts-jest": "^29.1.0",
-    "typescript": "^4.4.4"
+    "ts-jest": "^29.2.5",
+    "typescript": "4.1.6"
   },
   "lint-staged": {
     "*.md": [
@@ -27,6 +29,7 @@
     ]
   },
   "scripts": {
+    "verify:all": "npm run format:verify && npm run lint",
     "compile": "tsc --noEmit",
     "format": "prettier --ignore-path .prettierignore --write",
     "format:md": "prettier --ignore-path .prettierignore --write \"./**/*.(md)\"",
